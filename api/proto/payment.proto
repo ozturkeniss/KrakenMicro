@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package payment;
+
+option go_package = "gomicro/api/proto";
+
+service PaymentService {
+  rpc ProcessPayment(ProcessPaymentRequest) returns (PaymentResponse) {}
+  rpc GetPayment(GetPaymentRequest) returns (PaymentResponse) {}
+}
+
+message ProcessPaymentRequest {
+  uint32 user_id = 1;
+  double amount = 2;
+  string currency = 3;
+  string payment_method = 4;
+}
+
+message GetPaymentRequest {
+  uint32 payment_id = 1;
+}
+
+message PaymentResponse {
+  uint32 payment_id = 1;
+  uint32 user_id = 2;
+  double amount = 3;
+  string currency = 4;
+  string status = 5;
+  string created_at = 6;
+} 

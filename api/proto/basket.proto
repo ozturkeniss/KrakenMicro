@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package basket;
+
+option go_package = "gomicro/api/proto";
+
+service BasketService {
+  rpc GetBasket(GetBasketRequest) returns (Basket) {}
+  rpc AddItem(AddItemRequest) returns (Basket) {}
+  rpc UpdateItem(UpdateItemRequest) returns (Basket) {}
+  rpc RemoveItem(RemoveItemRequest) returns (Basket) {}
+  rpc ClearBasket(ClearBasketRequest) returns (ClearBasketResponse) {}
+}
+
+message GetBasketRequest {
+  uint32 user_id = 1;
+}
+
+message AddItemRequest {
+  uint32 user_id = 1;
+  uint32 product_id = 2;
+  int32 quantity = 3;
+}
+
+message UpdateItemRequest {
+  uint32 user_id = 1;
+  uint32 product_id = 2;
+  int32 quantity = 3;
+}
+
+message RemoveItemRequest {
+  uint32 user_id = 1;
+  uint32 product_id = 2;
+}
+
+message ClearBasketRequest {
+  uint32 user_id = 1;
+}
+
+message Basket {
+  uint32 user_id = 1;
+  repeated BasketItem items = 2;
+  double total = 3;
+  string updated_at = 4;
+}
+
+message BasketItem {
+  uint32 product_id = 1;
+  int32 quantity = 2;
+  double price = 3;
+  string name = 4;
+}
+
+message ClearBasketResponse {
+  bool success = 1;
+} 

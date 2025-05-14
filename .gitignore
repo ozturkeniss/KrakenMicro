@@ -1,0 +1,57 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.coverprofile
+
+# Dependency directories (remove the comment below if you use Go modules)
+/vendor/
+
+# Go workspace file
+*.code-workspace
+
+# Go build cache
+**/tmp/
+*.log
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Docker
+**/postgres_data/
+**/redis_data/
+**/rabbitmq_data/
+
+# Build output
+/build/
+/bin/
+
+# Test output
+*.test
+coverage.out
+
+# Krakend config
+cmd/api-gateway/krakend.json
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore GoLand project files
+*.iml
+
+# Ignore node_modules if any frontend exists
+node_modules/ 
