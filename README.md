@@ -1,6 +1,6 @@
-# GoMicro
+# KrakenMicro
 
-GoMicro is a modern, microservices-based backend system designed for e-commerce platforms. The architecture leverages Go for high performance and scalability, and integrates PostgreSQL, Redis, and RabbitMQ to ensure robust data management, caching, and asynchronous communication. API Gateway functionality is provided by Krakend, enabling unified and secure access to all services.
+KrakenMicro is a modern, microservices-based backend system designed for e-commerce platforms. The architecture leverages Go for high performance and scalability, and integrates PostgreSQL, Redis, and RabbitMQ to ensure robust data management, caching, and asynchronous communication. API Gateway functionality is provided by Krakend, enabling unified and secure access to all services.
 
 ## Architecture Overview
 
